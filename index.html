@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>表白网站</title>
+    <title>咖喱&胡椒</title>
     <style>
         body, html {
             margin: 0;
@@ -27,18 +27,47 @@
                 background-position: 0% 50%;
             }
         }
-        .love-letter {
-            font-size: 2em;
-            color: white;
+        .flex-container {
+            margin-left: 20%;
+            display: flex;
+            justify-content: space-around; /* 根据屏幕大小分配空间 */
+            align-items: flex-start; /* 垂直对齐方式 */
+            padding: 20px; /* 容器内边距 */
         }
+
+        .image-container {
+            flex: 1; /* 图片容器占据的相对空间 */
+            padding: 10px; /* 图片容器的内边距 */
+            text-align: center; /* 图片和描述文字居中对齐 */
+        }
+
+        .love-letter {
+            flex: 2; /* 文字容器占据的相对空间，比图片容器大 */
+            padding: 20px; /* 文字容器的内边距 */
+            text-align: left; /* 文字左对齐 */
+        }
+
+        /* 图片样式 */
+        .image-container img {
+            max-width: 100%; /* 图片最大宽度为容器宽度 */
+            height: auto; /* 高度自适应 */
+            border-radius: 10px; /* 圆角边框 */
+        }
+
+        /* 其他样式保持不变 */
     </style>
 </head>
 <body>
-<div class="love-letter">
-    <p>亲爱的yolo，</p>
-    <p>很高兴遇见你！</p>
-    <p>喜欢看你傻笑，和跟你黏在一起的感觉，</p>
-    <p>喜欢土直傻憨的你，很高兴我们能一起在阳光下牵手和轻吻！</p>
+<div class="flex-container">
+    <div class="image-container">
+        <img src="1.jpg" alt="描述文字">
+    </div>
+    <div class="love-letter">
+        <p>亲爱的胡椒，</p>
+        <p>很高兴遇见你！</p>
+        <p>喜欢看你傻笑，和跟你黏在一起的感觉，</p>
+        <p>喜欢土直傻憨的你，很高兴我们能一起在阳光下牵手和轻吻！</p>
+    </div>
 </div>
 </body>
 </html>
